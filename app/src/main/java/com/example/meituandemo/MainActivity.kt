@@ -3,6 +3,8 @@ package com.example.meituandemo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import jp.wasabeef.recyclerview.adapters.AlphaInAnimationAdapter
+import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -92,7 +94,19 @@ class MainActivity : AppCompatActivity() {
         HomeRecyclerView.layoutManager = layoutManager
         //实例化数据适配器，装载数据
         val adapter = HomeDataAdapter(homeDataList)
+        //为适配器添加缩放动画
+        val adapter1 = ScaleInAnimationAdapter(adapter).apply {
+            //设置动画时长
+            setDuration(500)
+            //设置动画重复
+            setFirstOnly(false)
+        }
+        //叠加上面的动画，添加淡出动画
+        val adapter2 = AlphaInAnimationAdapter(adapter1).apply {
+            setDuration(300)
+            setFirstOnly(false)
+        }
         //将数据适配器的设置到控件上
-        HomeRecyclerView.adapter = adapter
+        HomeRecyclerView.adapter = adapter2
     }
 }
