@@ -48,11 +48,13 @@ class HomeDataAdapter(private val homeDataList: List<HomeData>) :
         if (homeData.label1 == "") {
             holder.label1.visibility = View.GONE
         } else {
+            holder.label1.visibility = View.VISIBLE
             holder.label1.text = homeData.label1
         }
         if (homeData.label2 == "") {
             holder.label2.visibility = View.GONE
         } else {
+            holder.label2.visibility = View.VISIBLE
             holder.label2.text = homeData.label2
         }
     }
