@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import jp.wasabeef.recyclerview.adapters.AlphaInAnimationAdapter
 import jp.wasabeef.recyclerview.adapters.ScaleInAnimationAdapter
+import jp.wasabeef.recyclerview.adapters.SlideInBottomAnimationAdapter
+import jp.wasabeef.recyclerview.adapters.SlideInRightAnimationAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -65,7 +67,7 @@ class MainActivity : AppCompatActivity() {
                     "太好吃太划算了",
                     "4.1分",
                     "￥118",
-                    "155",
+                    "￥155",
                     "已减37元"
                 )
             )
@@ -76,7 +78,7 @@ class MainActivity : AppCompatActivity() {
                     "我觉得真的很好吃",
                     "半年售5000+ | 9.7km",
                     "￥108",
-                    "138",
+                    "￥138",
                     "已减30元"
                 )
             )

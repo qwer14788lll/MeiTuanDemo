@@ -43,6 +43,9 @@ class HomeDataAdapter(private val homeDataList: List<HomeData>) :
         if (homeData.originalPrice != "起") {
             //添加删除线
             holder.originalPrice.paint.flags = Paint.STRIKE_THRU_TEXT_FLAG
+        } else {
+            //移除删除线
+            holder.originalPrice.paint.flags = 0
         }
         //数据为空则隐藏该控件(不占据空间)
         if (homeData.label1 == "") {
